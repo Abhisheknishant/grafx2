@@ -1,5 +1,7 @@
 language: c
-
+arch:
+    - amd64
+    - arm64
 addons:
   apt:
     packages:
@@ -29,6 +31,21 @@ matrix:
       env: 'SWITCH=1'
       sudo: required
     - os: linux
+      env: 'ATARICROSS=1'
+      sudo: required
+      dist: xenial
+    - arch: arm64
+      os: linux
+      env: ''
+    - arh: arm64
+      os: linux
+      env: 'WIN32CROSS=1'
+    - arch: arm64
+      os: linux
+      env: 'SWITCH=1'
+      sudo: required
+    - arch: arm64
+      os: linux
       env: 'ATARICROSS=1'
       sudo: required
       dist: xenial
